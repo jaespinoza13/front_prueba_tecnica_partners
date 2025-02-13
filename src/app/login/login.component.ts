@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
         pass: this.loginForm.value.password,
       };
   
-      this.http.post<any>('http://localhost:5078/api/login', loginData).subscribe(
+      this.http.post<any>('http://localhost:5078/api/usuarios/login', loginData).subscribe(
         (response) => {
           if (response.mensaje === 'Autenticación exitosa') {
             // Guardar cualquier dato que desees, como un token si lo tienes
